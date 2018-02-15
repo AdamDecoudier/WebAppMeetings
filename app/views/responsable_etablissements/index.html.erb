@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Responsable Etablissements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pseudo</th>
+      <th>Mdp</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Mail</th>
+      <th>Fonction</th>
+      <th>Tel</th>
+      <th>Etablissement</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responsable_etablissements.each do |responsable_etablissement| %>
+      <tr>
+        <td><%= responsable_etablissement.pseudo %></td>
+        <td><%= responsable_etablissement.mdp %></td>
+        <td><%= responsable_etablissement.nom %></td>
+        <td><%= responsable_etablissement.prenom %></td>
+        <td><%= responsable_etablissement.mail %></td>
+        <td><%= responsable_etablissement.fonction %></td>
+        <td><%= responsable_etablissement.tel %></td>
+        <td><%= responsable_etablissement.etablissement %></td>
+        <td><%= link_to 'Show', responsable_etablissement %></td>
+        <td><%= link_to 'Edit', edit_responsable_etablissement_path(responsable_etablissement) %></td>
+        <td><%= link_to 'Destroy', responsable_etablissement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Responsable Etablissement', new_responsable_etablissement_path %>

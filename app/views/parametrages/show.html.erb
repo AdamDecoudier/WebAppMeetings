@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libelle:</strong>
+  <%= @parametrage.libelle %>
+</p>
+
+<p>
+  <strong>Typeparam:</strong>
+  <%= @parametrage.typeParam %>
+</p>
+
+<%= link_to 'Edit', edit_parametrage_path(@parametrage) %> |
+<%= link_to 'Back', parametrages_path %>

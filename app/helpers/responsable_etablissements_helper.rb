@@ -1,0 +1,2 @@
+module ResponsableEtablissementsHelper
+end

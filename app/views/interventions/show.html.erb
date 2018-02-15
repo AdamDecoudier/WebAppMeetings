@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @intervention.titre %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @intervention.date %>
+</p>
+
+<p>
+  <strong>Duree:</strong>
+  <%= @intervention.duree %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @intervention.description %>
+</p>
+
+<p>
+  <strong>Nbgarcon:</strong>
+  <%= @intervention.nbGarcon %>
+</p>
+
+<p>
+  <strong>Nbfille:</strong>
+  <%= @intervention.nbFille %>
+</p>
+
+<p>
+  <strong>Nbelevesprevison:</strong>
+  <%= @intervention.nbElevesPrevison %>
+</p>
+
+<p>
+  <strong>Nbelevespresents:</strong>
+  <%= @intervention.nbElevesPresents %>
+</p>
+
+<p>
+  <strong>Nbintavant:</strong>
+  <%= @intervention.nbIntAvant %>
+</p>
+
+<p>
+  <strong>Nbintapres:</strong>
+  <%= @intervention.nbIntApres %>
+</p>
+
+<p>
+  <strong>Heuredebut:</strong>
+  <%= @intervention.heureDebut %>
+</p>
+
+<p>
+  <strong>Etablissement:</strong>
+  <%= @intervention.etablissement %>
+</p>
+
+<p>
+  <strong>Parametrage:</strong>
+  <%= @intervention.parametrage %>
+</p>
+
+<%= link_to 'Edit', edit_intervention_path(@intervention) %> |
+<%= link_to 'Back', interventions_path %>

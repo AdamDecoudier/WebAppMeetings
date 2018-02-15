@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pseudo:</strong>
+  <%= @responsable_etablissement.pseudo %>
+</p>
+
+<p>
+  <strong>Mdp:</strong>
+  <%= @responsable_etablissement.mdp %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @responsable_etablissement.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @responsable_etablissement.prenom %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @responsable_etablissement.mail %>
+</p>
+
+<p>
+  <strong>Fonction:</strong>
+  <%= @responsable_etablissement.fonction %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @responsable_etablissement.tel %>
+</p>
+
+<p>
+  <strong>Etablissement:</strong>
+  <%= @responsable_etablissement.etablissement %>
+</p>
+
+<%= link_to 'Edit', edit_responsable_etablissement_path(@responsable_etablissement) %> |
+<%= link_to 'Back', responsable_etablissements_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: intervient, local: true) do |form| %>
+  <% if intervient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intervient.errors.count, "error") %> prohibited this intervient from being saved:</h2>
+
+      <ul>
+      <% intervient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :intervenant_id %>
+    <%= form.text_field :intervenant_id, id: :intervient_intervenant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intervention_id %>
+    <%= form.text_field :intervention_id, id: :intervient_intervention_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

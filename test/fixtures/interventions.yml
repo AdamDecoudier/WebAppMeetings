@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titre: MyString
+  date: 2018-02-15 13:17:01
+  duree: 2018-02-15 13:17:01
+  description: MyString
+  nbGarcon: 1
+  nbFille: 1
+  nbElevesPrevison: 1
+  nbElevesPresents: 1
+  nbIntAvant: 1
+  nbIntApres: 1
+  heureDebut: 2018-02-15 13:17:01
+  etablissement: one
+  parametrage: one
+
+two:
+  titre: MyString
+  date: 2018-02-15 13:17:01
+  duree: 2018-02-15 13:17:01
+  description: MyString
+  nbGarcon: 1
+  nbFille: 1
+  nbElevesPrevison: 1
+  nbElevesPresents: 1
+  nbIntAvant: 1
+  nbIntApres: 1
+  heureDebut: 2018-02-15 13:17:01
+  etablissement: two
+  parametrage: two

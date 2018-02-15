@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Intervenants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Estresponsablepmis</th>
+      <th>Pseudo</th>
+      <th>Mdp</th>
+      <th>Tel</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Mail</th>
+      <th>Adresseperso1</th>
+      <th>Adresseperso2</th>
+      <th>Adressepersocp</th>
+      <th>Adressepersoville</th>
+      <th>Adressepro1</th>
+      <th>Adressepro2</th>
+      <th>Adresseprocp</th>
+      <th>Adresseproville</th>
+      <th>Metier</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intervenants.each do |intervenant| %>
+      <tr>
+        <td><%= intervenant.estResponsablePmis %></td>
+        <td><%= intervenant.pseudo %></td>
+        <td><%= intervenant.mdp %></td>
+        <td><%= intervenant.tel %></td>
+        <td><%= intervenant.nom %></td>
+        <td><%= intervenant.prenom %></td>
+        <td><%= intervenant.mail %></td>
+        <td><%= intervenant.adressePerso1 %></td>
+        <td><%= intervenant.adressePerso2 %></td>
+        <td><%= intervenant.adressePersoCp %></td>
+        <td><%= intervenant.adressePersoVille %></td>
+        <td><%= intervenant.adressePro1 %></td>
+        <td><%= intervenant.adressePro2 %></td>
+        <td><%= intervenant.adresseProCp %></td>
+        <td><%= intervenant.adresseProVille %></td>
+        <td><%= intervenant.metier %></td>
+        <td><%= link_to 'Show', intervenant %></td>
+        <td><%= link_to 'Edit', edit_intervenant_path(intervenant) %></td>
+        <td><%= link_to 'Destroy', intervenant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intervenant', new_intervenant_path %>

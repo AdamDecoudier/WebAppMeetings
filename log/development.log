@@ -1,0 +1,213 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMetiers (20180215121643)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "metiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "label" varchar, "specialite" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121643"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEtablissements (20180215121650)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "etablissements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar, "mail" varchar, "adresse1" varchar, "adresse2" varchar, "adresseCp" varchar, "adresseVille" varchar, "zep" boolean, "zoneRural" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121650"]]
+  [1m[35m (26.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateParametrages (20180215121656)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "parametrages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "libelle" varchar, "typeParam" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121656"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateInterventions (20180215121701)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "interventions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titre" varchar, "date" datetime, "duree" time, "description" varchar, "nbGarcon" integer, "nbFille" integer, "nbElevesPrevison" integer, "nbElevesPresents" integer, "nbIntAvant" integer, "nbIntApres" integer, "heureDebut" time, "etablissement_id" integer, "parametrage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_ac662cef68"
+FOREIGN KEY ("etablissement_id")
+  REFERENCES "etablissements" ("id")
+, CONSTRAINT "fk_rails_2a76f9950e"
+FOREIGN KEY ("parametrage_id")
+  REFERENCES "parametrages" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_interventions_on_etablissement_id" ON "interventions" ("etablissement_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_interventions_on_etablissement_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_interventions_on_etablissement_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_interventions_on_parametrage_id" ON "interventions" ("parametrage_id")[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121701"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateResponsableEtablissements (20180215121709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "responsable_etablissements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "pseudo" varchar, "mdp" varchar, "nom" varchar, "prenom" varchar, "mail" varchar, "fonction" varchar, "tel" varchar, "etablissement_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_96dd3bce73"
+FOREIGN KEY ("etablissement_id")
+  REFERENCES "etablissements" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_responsable_etablissements_on_etablissement_id" ON "responsable_etablissements" ("etablissement_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121709"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateIntervenants (20180215121714)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "intervenants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estResponsablePmis" boolean, "pseudo" varchar, "mdp" varchar, "tel" varchar, "nom" varchar, "prenom" varchar, "mail" varchar, "adressePerso1" varchar, "adressePerso2" varchar, "adressePersoCp" varchar, "adressePersoVille" varchar, "adressePro1" varchar, "adressePro2" varchar, "adresseProCp" varchar, "adresseProVille" varchar, "metier_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_009a938c64"
+FOREIGN KEY ("metier_id")
+  REFERENCES "metiers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_intervenants_on_metier_id" ON "intervenants" ("metier_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121714"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateIntervients (20180215121719)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "intervients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "intervenant_id" integer, "intervention_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_272336fb5c"
+FOREIGN KEY ("intervenant_id")
+  REFERENCES "intervenants" ("id")
+, CONSTRAINT "fk_rails_b4aaa1d507"
+FOREIGN KEY ("intervention_id")
+  REFERENCES "interventions" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_intervients_on_intervenant_id" ON "intervients" ("intervenant_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_intervients_on_intervenant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_intervients_on_intervenant_id' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_intervients_on_intervention_id" ON "intervients" ("intervention_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121719"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEstDuTypes (20180215121724)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "est_du_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "etablissement_id" integer, "parametrage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_78e4cb021a"
+FOREIGN KEY ("etablissement_id")
+  REFERENCES "etablissements" ("id")
+, CONSTRAINT "fk_rails_6a2275005c"
+FOREIGN KEY ("parametrage_id")
+  REFERENCES "parametrages" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_est_du_types_on_etablissement_id" ON "est_du_types" ("etablissement_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_est_du_types_on_etablissement_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_est_du_types_on_etablissement_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_est_du_types_on_parametrage_id" ON "est_du_types" ("parametrage_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180215121724"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-15 12:17:31.655185"], ["updated_at", "2018-02-15 12:17:31.655185"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_est_du_types_on_parametrage_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_est_du_types_on_parametrage_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_est_du_types_on_etablissement_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_est_du_types_on_etablissement_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_intervenants_on_metier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_intervenants_on_metier_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_interventions_on_parametrage_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_interventions_on_parametrage_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_interventions_on_etablissement_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_interventions_on_etablissement_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_intervients_on_intervention_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_intervients_on_intervention_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_intervients_on_intervenant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_intervients_on_intervenant_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_responsable_etablissements_on_etablissement_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_responsable_etablissements_on_etablissement_id' AND type='index'
+[0m
+Started GET "/parametrages" for 127.0.0.1 at 2018-02-15 13:17:53 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ParametragesController#index as HTML
+  Rendering parametrages/index.html.erb within layouts/application
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT "parametrages".* FROM "parametrages"[0m
+  Rendered parametrages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 564ms (Views: 552.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parametrages/new" for 127.0.0.1 at 2018-02-15 13:17:55 +0100
+Processing by ParametragesController#new as HTML
+  Rendering parametrages/new.html.erb within layouts/application
+  Rendered parametrages/_form.html.erb (14.2ms)
+  Rendered parametrages/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/parametrages" for 127.0.0.1 at 2018-02-15 13:18:20 +0100
+Processing by ParametragesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZb24XK3encAwZi2/K59DW09PX9qeZKn+Hxxrw8PuGJ0NWASAOCtZffaK1/nwKdektZle1R6V/yvQp1ryQBdKQ==", "parametrage"=>{"libelle"=>"lycée", "typeParam"=>"Etablissement"}, "commit"=>"Create Parametrage"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "parametrages" ("libelle", "typeParam", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["libelle", "lycée"], ["typeParam", "Etablissement"], ["created_at", "2018-02-15 12:18:20.647629"], ["updated_at", "2018-02-15 12:18:20.647629"]]
+  [1m[35m (327.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/parametrages/1
+Completed 302 Found in 332ms (ActiveRecord: 327.8ms)
+
+
+Started GET "/parametrages/1" for 127.0.0.1 at 2018-02-15 13:18:20 +0100
+Processing by ParametragesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parametrages/show.html.erb within layouts/application
+  Rendered parametrages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parametrages" for 127.0.0.1 at 2018-02-15 13:18:22 +0100
+Processing by ParametragesController#index as HTML
+  Rendering parametrages/index.html.erb within layouts/application
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT "parametrages".* FROM "parametrages"[0m
+  Rendered parametrages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+

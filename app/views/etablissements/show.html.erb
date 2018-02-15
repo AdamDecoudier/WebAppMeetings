@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @etablissement.nom %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @etablissement.mail %>
+</p>
+
+<p>
+  <strong>Adresse1:</strong>
+  <%= @etablissement.adresse1 %>
+</p>
+
+<p>
+  <strong>Adresse2:</strong>
+  <%= @etablissement.adresse2 %>
+</p>
+
+<p>
+  <strong>Adressecp:</strong>
+  <%= @etablissement.adresseCp %>
+</p>
+
+<p>
+  <strong>Adresseville:</strong>
+  <%= @etablissement.adresseVille %>
+</p>
+
+<p>
+  <strong>Zep:</strong>
+  <%= @etablissement.zep %>
+</p>
+
+<p>
+  <strong>Zonerural:</strong>
+  <%= @etablissement.zoneRural %>
+</p>
+
+<%= link_to 'Edit', edit_etablissement_path(@etablissement) %> |
+<%= link_to 'Back', etablissements_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: etablissement, local: true) do |form| %>
+  <% if etablissement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(etablissement.errors.count, "error") %> prohibited this etablissement from being saved:</h2>
+
+      <ul>
+      <% etablissement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, id: :etablissement_nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, id: :etablissement_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresse1 %>
+    <%= form.text_field :adresse1, id: :etablissement_adresse1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresse2 %>
+    <%= form.text_field :adresse2, id: :etablissement_adresse2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresseCp %>
+    <%= form.text_field :adresseCp, id: :etablissement_adresseCp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresseVille %>
+    <%= form.text_field :adresseVille, id: :etablissement_adresseVille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zep %>
+    <%= form.check_box :zep, id: :etablissement_zep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zoneRural %>
+    <%= form.check_box :zoneRural, id: :etablissement_zoneRural %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

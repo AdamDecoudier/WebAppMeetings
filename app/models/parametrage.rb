@@ -1,0 +1,2 @@
+class Parametrage < ApplicationRecord
+end

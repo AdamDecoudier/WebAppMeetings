@@ -1,0 +1,57 @@
+<%= form_with(model: responsable_etablissement, local: true) do |form| %>
+  <% if responsable_etablissement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(responsable_etablissement.errors.count, "error") %> prohibited this responsable_etablissement from being saved:</h2>
+
+      <ul>
+      <% responsable_etablissement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pseudo %>
+    <%= form.text_field :pseudo, id: :responsable_etablissement_pseudo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mdp %>
+    <%= form.text_field :mdp, id: :responsable_etablissement_mdp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, id: :responsable_etablissement_nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom, id: :responsable_etablissement_prenom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, id: :responsable_etablissement_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fonction %>
+    <%= form.text_field :fonction, id: :responsable_etablissement_fonction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel, id: :responsable_etablissement_tel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :etablissement_id %>
+    <%= form.text_field :etablissement_id, id: :responsable_etablissement_etablissement_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

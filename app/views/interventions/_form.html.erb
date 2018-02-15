@@ -1,0 +1,82 @@
+<%= form_with(model: intervention, local: true) do |form| %>
+  <% if intervention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intervention.errors.count, "error") %> prohibited this intervention from being saved:</h2>
+
+      <ul>
+      <% intervention.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre, id: :intervention_titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date, id: :intervention_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duree %>
+    <%= form.time_select :duree, id: :intervention_duree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :intervention_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbGarcon %>
+    <%= form.number_field :nbGarcon, id: :intervention_nbGarcon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbFille %>
+    <%= form.number_field :nbFille, id: :intervention_nbFille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbElevesPrevison %>
+    <%= form.number_field :nbElevesPrevison, id: :intervention_nbElevesPrevison %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbElevesPresents %>
+    <%= form.number_field :nbElevesPresents, id: :intervention_nbElevesPresents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbIntAvant %>
+    <%= form.number_field :nbIntAvant, id: :intervention_nbIntAvant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbIntApres %>
+    <%= form.number_field :nbIntApres, id: :intervention_nbIntApres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heureDebut %>
+    <%= form.time_select :heureDebut, id: :intervention_heureDebut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :etablissement_id %>
+    <%= form.text_field :etablissement_id, id: :intervention_etablissement_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parametrage_id %>
+    <%= form.text_field :parametrage_id, id: :intervention_parametrage_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

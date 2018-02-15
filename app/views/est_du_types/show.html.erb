@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Etablissement:</strong>
+  <%= @est_du_type.etablissement %>
+</p>
+
+<p>
+  <strong>Parametrage:</strong>
+  <%= @est_du_type.parametrage %>
+</p>
+
+<%= link_to 'Edit', edit_est_du_type_path(@est_du_type) %> |
+<%= link_to 'Back', est_du_types_path %>

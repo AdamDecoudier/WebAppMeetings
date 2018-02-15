@@ -1,0 +1,27 @@
+<%= form_with(model: parametrage, local: true) do |form| %>
+  <% if parametrage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parametrage.errors.count, "error") %> prohibited this parametrage from being saved:</h2>
+
+      <ul>
+      <% parametrage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :libelle %>
+    <%= form.text_field :libelle, id: :parametrage_libelle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :typeParam %>
+    <%= form.text_field :typeParam, id: :parametrage_typeParam %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

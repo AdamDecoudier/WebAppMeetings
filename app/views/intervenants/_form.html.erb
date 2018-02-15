@@ -1,0 +1,97 @@
+<%= form_with(model: intervenant, local: true) do |form| %>
+  <% if intervenant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intervenant.errors.count, "error") %> prohibited this intervenant from being saved:</h2>
+
+      <ul>
+      <% intervenant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :estResponsablePmis %>
+    <%= form.check_box :estResponsablePmis, id: :intervenant_estResponsablePmis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pseudo %>
+    <%= form.text_field :pseudo, id: :intervenant_pseudo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mdp %>
+    <%= form.text_field :mdp, id: :intervenant_mdp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel, id: :intervenant_tel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, id: :intervenant_nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom, id: :intervenant_prenom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, id: :intervenant_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePerso1 %>
+    <%= form.text_field :adressePerso1, id: :intervenant_adressePerso1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePerso2 %>
+    <%= form.text_field :adressePerso2, id: :intervenant_adressePerso2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePersoCp %>
+    <%= form.text_field :adressePersoCp, id: :intervenant_adressePersoCp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePersoVille %>
+    <%= form.text_field :adressePersoVille, id: :intervenant_adressePersoVille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePro1 %>
+    <%= form.text_field :adressePro1, id: :intervenant_adressePro1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adressePro2 %>
+    <%= form.text_field :adressePro2, id: :intervenant_adressePro2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresseProCp %>
+    <%= form.text_field :adresseProCp, id: :intervenant_adresseProCp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresseProVille %>
+    <%= form.text_field :adresseProVille, id: :intervenant_adresseProVille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metier_id %>
+    <%= form.text_field :metier_id, id: :intervenant_metier_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

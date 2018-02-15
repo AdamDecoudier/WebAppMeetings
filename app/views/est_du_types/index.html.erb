@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Est Du Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Etablissement</th>
+      <th>Parametrage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @est_du_types.each do |est_du_type| %>
+      <tr>
+        <td><%= est_du_type.etablissement %></td>
+        <td><%= est_du_type.parametrage %></td>
+        <td><%= link_to 'Show', est_du_type %></td>
+        <td><%= link_to 'Edit', edit_est_du_type_path(est_du_type) %></td>
+        <td><%= link_to 'Destroy', est_du_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Est Du Type', new_est_du_type_path %>
