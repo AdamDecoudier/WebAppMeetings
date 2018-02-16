@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Intervenant</th>
       <th>Intervention</th>
       <th colspan="3"></th>
@@ -14,8 +15,9 @@
   <tbody>
     <% @intervients.each do |intervient| %>
       <tr>
-        <td><%= intervient.intervenant %></td>
-        <td><%= intervient.intervention %></td>
+        <td><%= intervient.id %></td>
+        <td><%= intervient.intervenant.pseudo %></td>
+        <td><%= intervient.intervention.titre %></td>
         <td><%= link_to 'Show', intervient %></td>
         <td><%= link_to 'Edit', edit_intervient_path(intervient) %></td>
         <td><%= link_to 'Destroy', intervient, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Label</th>
       <th>Specialite</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @metiers.each do |metier| %>
       <tr>
+        <td><%= metier.id %></td>
         <td><%= metier.label %></td>
         <td><%= metier.specialite %></td>
         <td><%= link_to 'Show', metier %></td>

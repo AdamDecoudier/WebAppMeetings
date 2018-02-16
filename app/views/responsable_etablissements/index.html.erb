@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Pseudo</th>
       <th>Mdp</th>
       <th>Nom</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @responsable_etablissements.each do |responsable_etablissement| %>
       <tr>
+        <td><%= responsable_etablissement.id %></td>
         <td><%= responsable_etablissement.pseudo %></td>
         <td><%= responsable_etablissement.mdp %></td>
         <td><%= responsable_etablissement.nom %></td>
@@ -27,7 +29,7 @@
         <td><%= responsable_etablissement.mail %></td>
         <td><%= responsable_etablissement.fonction %></td>
         <td><%= responsable_etablissement.tel %></td>
-        <td><%= responsable_etablissement.etablissement %></td>
+        <td><%= responsable_etablissement.etablissement.nom %></td>
         <td><%= link_to 'Show', responsable_etablissement %></td>
         <td><%= link_to 'Edit', edit_responsable_etablissement_path(responsable_etablissement) %></td>
         <td><%= link_to 'Destroy', responsable_etablissement, method: :delete, data: { confirm: 'Are you sure?' } %></td>

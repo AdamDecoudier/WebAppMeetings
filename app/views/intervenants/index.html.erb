@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Estresponsablepmis</th>
       <th>Pseudo</th>
       <th>Mdp</th>
@@ -28,6 +29,7 @@
   <tbody>
     <% @intervenants.each do |intervenant| %>
       <tr>
+        <td><%= intervenant.id %></td>
         <td><%= intervenant.estResponsablePmis %></td>
         <td><%= intervenant.pseudo %></td>
         <td><%= intervenant.mdp %></td>
@@ -43,7 +45,7 @@
         <td><%= intervenant.adressePro2 %></td>
         <td><%= intervenant.adresseProCp %></td>
         <td><%= intervenant.adresseProVille %></td>
-        <td><%= intervenant.metier %></td>
+        <td><%= intervenant.metier.label%></td>
         <td><%= link_to 'Show', intervenant %></td>
         <td><%= link_to 'Edit', edit_intervenant_path(intervenant) %></td>
         <td><%= link_to 'Destroy', intervenant, method: :delete, data: { confirm: 'Are you sure?' } %></td>

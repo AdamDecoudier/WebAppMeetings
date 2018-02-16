@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Nom</th>
       <th>Mail</th>
       <th>Adresse1</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @etablissements.each do |etablissement| %>
       <tr>
+        <td><%= etablissement.id %></td>
         <td><%= etablissement.nom %></td>
         <td><%= etablissement.mail %></td>
         <td><%= etablissement.adresse1 %></td>

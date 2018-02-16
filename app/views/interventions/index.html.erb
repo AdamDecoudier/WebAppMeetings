@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Titre</th>
       <th>Date</th>
       <th>Duree</th>
@@ -25,6 +26,7 @@
   <tbody>
     <% @interventions.each do |intervention| %>
       <tr>
+        <td><%= intervention.id %></td>
         <td><%= intervention.titre %></td>
         <td><%= intervention.date %></td>
         <td><%= intervention.duree %></td>
@@ -36,8 +38,8 @@
         <td><%= intervention.nbIntAvant %></td>
         <td><%= intervention.nbIntApres %></td>
         <td><%= intervention.heureDebut %></td>
-        <td><%= intervention.etablissement %></td>
-        <td><%= intervention.parametrage %></td>
+        <td><%= intervention.etablissement.nom %></td>
+        <td><%= intervention.parametrage.libelle %></td>
         <td><%= link_to 'Show', intervention %></td>
         <td><%= link_to 'Edit', edit_intervention_path(intervention) %></td>
         <td><%= link_to 'Destroy', intervention, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Libelle</th>
       <th>Typeparam</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @parametrages.each do |parametrage| %>
       <tr>
+        <td><%= parametrage.id %></td>
         <td><%= parametrage.libelle %></td>
         <td><%= parametrage.typeParam %></td>
         <td><%= link_to 'Show', parametrage %></td>
