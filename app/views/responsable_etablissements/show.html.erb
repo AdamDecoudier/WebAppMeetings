@@ -40,5 +40,6 @@
   <%= @responsable_etablissement.etablissement %>
 </p>
 
+<%= button_to "Envoie mail", :method=> "sendMail"%>
 <%= link_to 'Edit', edit_responsable_etablissement_path(@responsable_etablissement) %> |
 <%= link_to 'Back', responsable_etablissements_path %>

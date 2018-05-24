@@ -28,6 +28,10 @@ class InterventionsController < ApplicationController
 
     respond_to do |format|
       if @intervention.save
+
+        #sends email to responsable_etablissement
+        ExampleMailer.sample_email(ResponsableEtablissement.first).deliver
+
         format.html { redirect_to @intervention, notice: 'Intervention was successfully created.' }
         format.json { render :show, status: :created, location: @intervention }
       else

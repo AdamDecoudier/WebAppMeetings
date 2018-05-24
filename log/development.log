@@ -1181,3 +1181,964 @@ Processing by ParametragesController#index as HTML
 Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:35:35 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 404 Not Found in 404ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::ActionNotFound (Email 'sample_mail_preview' not found in ExampleMailerPreview):
+  
+railties (5.1.5) lib/rails/mailers_controller.rb:38:in `preview'
+actionpack (5.1.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:36:01 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 404 Not Found in 2ms
+
+
+  
+AbstractController::ActionNotFound (Email 'sample_mail_preview' not found in ExampleMailerPreview):
+  
+railties (5.1.5) lib/rails/mailers_controller.rb:38:in `preview'
+actionpack (5.1.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:36:58 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 404 Not Found in 1ms
+
+
+  
+AbstractController::ActionNotFound (Email 'sample_mail_preview' not found in ExampleMailerPreview):
+  
+railties (5.1.5) lib/rails/mailers_controller.rb:38:in `preview'
+actionpack (5.1.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.5) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.5) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.5) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.5) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:38:00 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 5ms
+
+
+  
+NameError (uninitialized constant ApplicationMailer::Base):
+  
+app/mailers/example_mailer.rb:1:in `<top (required)>'
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:38:32 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 26ms
+
+
+  
+NoMethodError (undefined method `from' for ExampleMailer:Class):
+  
+app/mailers/example_mailer.rb:2:in `<class:ExampleMailer>'
+app/mailers/example_mailer.rb:1:in `<top (required)>'
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:39:02 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 7ms
+
+
+  
+NameError (undefined local variable or method `responsable_etablissement' for #<ExampleMailerPreview:0x00007fb8bc8e43e8>):
+  
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:39:46 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 59ms
+
+
+  
+LoadError (Unable to autoload constant Responsable_etablissement, expected /home/adam/WebAppMeetings/app/models/responsable_etablissement.rb to define it):
+  
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:39:49 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+LoadError (Unable to autoload constant Responsable_etablissement, expected /home/adam/WebAppMeetings/app/models/responsable_etablissement.rb to define it):
+  
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:43:09 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+LoadError (Unable to autoload constant Responsable_etablissement, expected /home/adam/WebAppMeetings/app/models/responsable_etablissement.rb to define it):
+  
+test/mailers/previews/example_mailer_preview.rb:4:in `sample_mail_preview'
+  [1m[36mIntervenant Load (0.3ms)[0m  [1m[34mSELECT  "intervenants".* FROM "intervenants" ORDER BY "intervenants"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mResponsableEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 11:48:19 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+  [1m[36mResponsableEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.6ms)
+ExampleMailer#sample_email: processed outbound mail in 342.2ms
+  Rendering /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/mailers/email.html.erb (11.3ms)
+Completed 200 OK in 390ms (Views: 26.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/mailers/example_mailer/sample_mail_preview?part=text%2Fhtml" for 127.0.0.1 at 2018-02-16 11:48:20 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"example_mailer/sample_mail_preview"}
+  [1m[36mResponsableEtablissement Load (0.3ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.8ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.3ms)
+ExampleMailer#sample_email: processed outbound mail in 14.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 55ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/inter" for 127.0.0.1 at 2018-02-16 13:33:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/inter"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-16 13:34:00 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.3ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.3ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (281.2ms)
+Completed 200 OK in 610ms (Views: 605.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 13:34:22 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (6.3ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-16 13:34:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-16 13:36:31 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.2ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.1ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/intervenants/new" for 127.0.0.1 at 2018-02-16 13:36:48 +0100
+Processing by IntervenantsController#new as HTML
+  Rendering intervenants/new.html.erb within layouts/application
+  Rendered intervenants/_form.html.erb (824.1ms)
+  Rendered intervenants/new.html.erb within layouts/application (827.3ms)
+Completed 200 OK in 896ms (Views: 894.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-16 13:37:18 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.5ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.1ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/metiers" for 127.0.0.1 at 2018-02-16 13:38:05 +0100
+Processing by MetiersController#index as HTML
+  Rendering metiers/index.html.erb within layouts/application
+  [1m[36mMetier Load (0.2ms)[0m  [1m[34mSELECT "metiers".* FROM "metiers"[0m
+  Rendered metiers/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/intervenants/new" for 127.0.0.1 at 2018-02-16 13:40:38 +0100
+Processing by IntervenantsController#new as HTML
+  Rendering intervenants/new.html.erb within layouts/application
+  Rendered intervenants/_form.html.erb (5.3ms)
+  Rendered intervenants/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-16 13:42:26 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.3ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.2ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/responsable_etablissements" for 127.0.0.1 at 2018-02-16 13:42:28 +0100
+Processing by ResponsableEtablissementsController#index as HTML
+  Rendering responsable_etablissements/index.html.erb within layouts/application
+  [1m[36mResponsableEtablissement Load (0.3ms)[0m  [1m[34mSELECT "responsable_etablissements".* FROM "responsable_etablissements"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered responsable_etablissements/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/responsable_etablissements/new" for 127.0.0.1 at 2018-02-16 13:42:51 +0100
+Processing by ResponsableEtablissementsController#new as HTML
+  Rendering responsable_etablissements/new.html.erb within layouts/application
+  Rendered responsable_etablissements/_form.html.erb (3.7ms)
+  Rendered responsable_etablissements/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/responsable_etablissements" for 127.0.0.1 at 2018-02-16 13:43:23 +0100
+Processing by ResponsableEtablissementsController#index as HTML
+  Rendering responsable_etablissements/index.html.erb within layouts/application
+  [1m[36mResponsableEtablissement Load (0.2ms)[0m  [1m[34mSELECT "responsable_etablissements".* FROM "responsable_etablissements"[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered responsable_etablissements/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-16 13:43:26 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 91ms (Views: 83.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-16 13:43:27 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/interventions/new" for 127.0.0.1 at 2018-02-16 13:53:01 +0100
+Processing by InterventionsController#new as HTML
+  Rendering interventions/new.html.erb within layouts/application
+  Rendered interventions/_form.html.erb (303.0ms)
+  Rendered interventions/new.html.erb within layouts/application (307.5ms)
+Completed 200 OK in 340ms (Views: 338.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-16 13:56:57 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.7ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.3ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parametrages" for 127.0.0.1 at 2018-02-16 13:57:02 +0100
+Processing by ParametragesController#index as HTML
+  Rendering parametrages/index.html.erb within layouts/application
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT "parametrages".* FROM "parametrages"[0m
+  Rendered parametrages/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parametrages/new" for 127.0.0.1 at 2018-02-16 13:58:25 +0100
+Processing by ParametragesController#new as HTML
+  Rendering parametrages/new.html.erb within layouts/application
+  Rendered parametrages/_form.html.erb (2.1ms)
+  Rendered parametrages/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parametrages" for 127.0.0.1 at 2018-02-16 13:58:36 +0100
+Processing by ParametragesController#index as HTML
+  Rendering parametrages/index.html.erb within layouts/application
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT "parametrages".* FROM "parametrages"[0m
+  Rendered parametrages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/mailers/example_mailer/sample_mail_preview" for 127.0.0.1 at 2018-02-16 14:00:30 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"example_mailer/sample_mail_preview"}
+  [1m[36mResponsableEtablissement Load (0.5ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.6ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.6ms)
+ExampleMailer#sample_email: processed outbound mail in 13.2ms
+  Rendering /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/mailers/email.html.erb (2.4ms)
+Completed 200 OK in 23ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/example_mailer/sample_mail_preview?part=text%2Fhtml" for 127.0.0.1 at 2018-02-16 14:00:30 +0100
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"example_mailer/sample_mail_preview"}
+  [1m[36mResponsableEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.3ms)
+ExampleMailer#sample_email: processed outbound mail in 8.7ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-16 16:30:50 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 186ms (Views: 183.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/interventions/1" for 127.0.0.1 at 2018-02-16 16:30:56 +0100
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering interventions/show.html.erb within layouts/application
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/interventions/1?method=sendMail" for 127.0.0.1 at 2018-02-16 16:30:58 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/interventions/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-19 17:12:37 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/adam/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (7.1ms)
+Completed 200 OK in 71ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/intervenant" for 127.0.0.1 at 2018-02-19 17:12:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/intervenant"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-19 17:12:44 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.3ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.2ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 498ms (Views: 437.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-19 17:13:22 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 165ms (Views: 128.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/interventions/1" for 127.0.0.1 at 2018-02-19 17:13:24 +0100
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering interventions/show.html.erb within layouts/application
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.8ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 55ms (Views: 47.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/interventions/1?method=sendMail" for 127.0.0.1 at 2018-02-19 17:13:25 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/interventions/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/interventions/1" for 127.0.0.1 at 2018-02-19 17:18:06 +0100
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering interventions/show.html.erb within layouts/application
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 69ms (Views: 43.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-19 17:18:08 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/responsable_etablissements" for 127.0.0.1 at 2018-02-19 17:18:09 +0100
+Processing by ResponsableEtablissementsController#index as HTML
+  Rendering responsable_etablissements/index.html.erb within layouts/application
+  [1m[36mResponsableEtablissement Load (0.3ms)[0m  [1m[34mSELECT "responsable_etablissements".* FROM "responsable_etablissements"[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered responsable_etablissements/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 60ms (Views: 43.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/responsable_etablissements/1" for 127.0.0.1 at 2018-02-19 17:18:11 +0100
+Processing by ResponsableEtablissementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResponsableEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" WHERE "responsable_etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering responsable_etablissements/show.html.erb within layouts/application
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered responsable_etablissements/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/responsable_etablissements/1?method=sendMail" for 127.0.0.1 at 2018-02-19 17:18:12 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/responsable_etablissements/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/responsable_etablissements/1?method=sendMail" for 127.0.0.1 at 2018-02-19 18:50:11 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/responsable_etablissements/1"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-28 10:18:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.2ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.2ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (100.1ms)
+Completed 200 OK in 463ms (Views: 430.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mResponsableEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/intervenants" for 127.0.0.1 at 2018-02-28 10:32:06 +0100
+Started GET "/interventions" for 127.0.0.1 at 2018-02-28 10:32:16 +0100
+Processing by IntervenantsController#index as HTML
+  Rendering intervenants/index.html.erb within layouts/application
+  [1m[36mIntervenant Load (0.2ms)[0m  [1m[34mSELECT "intervenants".* FROM "intervenants"[0m
+  [1m[36mMetier Load (0.1ms)[0m  [1m[34mSELECT  "metiers".* FROM "metiers" WHERE "metiers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered intervenants/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 2.7ms)
+
+
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 263ms (Views: 120.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/intervenants/new" for 127.0.0.1 at 2018-02-28 10:32:17 +0100
+Processing by IntervenantsController#new as HTML
+  Rendering intervenants/new.html.erb within layouts/application
+  Rendered intervenants/_form.html.erb (177.1ms)
+  Rendered intervenants/new.html.erb within layouts/application (178.9ms)
+Completed 200 OK in 253ms (Views: 207.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-28 10:32:37 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/interventions/new" for 127.0.0.1 at 2018-02-28 10:32:38 +0100
+Processing by InterventionsController#new as HTML
+  Rendering interventions/new.html.erb within layouts/application
+  Rendered interventions/_form.html.erb (65.5ms)
+  Rendered interventions/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 145ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/interventions" for 127.0.0.1 at 2018-02-28 10:33:16 +0100
+Processing by InterventionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wbHq/hKqejugPfTvKZky49e8nVLk9AUB0WZOOUAeVRZ6c+k02ujv8hNC+RcwfCSDNHx2532LUL5FfOdKsHjWdg==", "intervention"=>{"titre"=>"test2", "date(1i)"=>"2017", "date(2i)"=>"4", "date(3i)"=>"16", "date(4i)"=>"07", "date(5i)"=>"21", "duree(1i)"=>"2018", "duree(2i)"=>"2", "duree(3i)"=>"28", "duree(4i)"=>"04", "duree(5i)"=>"17", "description"=>"description2", "nbGarcon"=>"21", "nbFille"=>"21", "nbElevesPrevison"=>"21", "nbElevesPresents"=>"21", "nbIntAvant"=>"21", "nbIntApres"=>"21", "heureDebut(1i)"=>"2018", "heureDebut(2i)"=>"2", "heureDebut(3i)"=>"28", "heureDebut(4i)"=>"09", "heureDebut(5i)"=>"32", "etablissement_id"=>"1", "parametrage_id"=>"1"}, "commit"=>"Create Intervention"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.0ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "interventions" ("titre", "date", "duree", "description", "nbGarcon", "nbFille", "nbElevesPrevison", "nbElevesPresents", "nbIntAvant", "nbIntApres", "heureDebut", "etablissement_id", "parametrage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["titre", "test2"], ["date", "2017-04-16 07:21:00"], ["duree", "2018-02-28 04:17:00"], ["description", "description2"], ["nbGarcon", 21], ["nbFille", 21], ["nbElevesPrevison", 21], ["nbElevesPresents", 21], ["nbIntAvant", 21], ["nbIntApres", 21], ["heureDebut", "2018-02-28 09:32:00"], ["etablissement_id", 1], ["parametrage_id", 1], ["created_at", "2018-02-28 09:33:16.400488"], ["updated_at", "2018-02-28 09:33:16.400488"]]
+  [1m[35m (33.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mResponsableEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "responsable_etablissements".* FROM "responsable_etablissements" ORDER BY "responsable_etablissements"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.4ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.2ms)
+ExampleMailer#sample_email: processed outbound mail in 322.3ms
+Sent mail to mailRESP@gmail.com (11.0ms)
+Date: Wed, 28 Feb 2018 10:33:17 +0100
+From: nowekgame@gmail.com
+To: mailRESP@gmail.com
+Message-ID: <5a96775d562fc_dc21bedf4c327cd@adam-VirtualBox.mail>
+Subject: Sample Email
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a96775d53df4_dc21bedf4c32634";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a96775d53df4_dc21bedf4c32634
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi PrenomRESP
+Sample mail sent using smtp.
+
+
+----==_mimepart_5a96775d53df4_dc21bedf4c32634
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv="content-type" />
+  </head>
+  <body>
+    <h1>Hi PrenomRESP</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5a96775d53df4_dc21bedf4c32634--
+
+Redirected to http://localhost:3000/interventions/2
+Completed 302 Found in 962ms (ActiveRecord: 36.1ms)
+
+
+Started GET "/interventions/2" for 127.0.0.1 at 2018-02-28 10:33:17 +0100
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering interventions/show.html.erb within layouts/application
+  [1m[36mEtablissement Load (0.1ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.1ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/interventions" for 127.0.0.1 at 2018-02-28 10:33:39 +0100
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions"[0m
+  [1m[36mEtablissement Load (0.2ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mParametrage Load (0.2ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Etablissement Load (0.0ms)[0m  [1m[34mSELECT  "etablissements".* FROM "etablissements" WHERE "etablissements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Parametrage Load (0.0ms)[0m  [1m[34mSELECT  "parametrages".* FROM "parametrages" WHERE "parametrages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered interventions/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.7ms)
+
+

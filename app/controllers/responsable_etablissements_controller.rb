@@ -35,7 +35,6 @@ class ResponsableEtablissementsController < ApplicationController
         format.json { render json: @responsable_etablissement.errors, status: :unprocessable_entity }
       end
     end
-  end
 
   # PATCH/PUT /responsable_etablissements/1
   # PATCH/PUT /responsable_etablissements/1.json
